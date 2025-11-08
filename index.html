@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoticus | The Art of Cultivation</title>
+    <meta name="description" content="Exoticus - Premium cannabis products focused on craftsmanship, nature, and wellness. Sustainably grown, lab tested, and OMMA compliant.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #3a5a40;
+            --accent: #a3b18a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 10px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Facility Section */
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .facility-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .facility-img {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .facility-content {
+            padding: 20px;
+        }
+
+        .facility-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Strains Section */
+        .strains {
+            background-color: #f8f9fa;
+        }
+
+        .strain-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: white;
+            border: 1px solid var(--gray);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .strains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .strain-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .strain-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .strain-img {
+            height: 200px;
+            background-color: #e9ecef;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .strain-content {
+            padding: 20px;
+        }
+
+        .strain-type {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Story Section */
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .story-image {
+            height: 400px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Brand Section */
+        .brand {
+            background-color: #f8f9fa;
+        }
+
+        .brand-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        /* Merchandise Section */
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .merch-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .merch-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .merch-img {
+            height: 250px;
+            background-color: #e9ecef;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .merch-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .merch-price {
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 10px 0;
+        }
+
+        /* Where to Buy Section */
+        .where-to-buy {
+            background-color: #f8f9fa;
+        }
+
+        .store-locator {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .map-container {
+            height: 400px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .stores-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .store-item {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .store-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .store-address {
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary);
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        /* Age Gate Modal */
+        .age-gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .age-gate-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .age-gate h2 {
+            margin-bottom: 20px;
+        }
+
+        .age-gate p {
+            margin-bottom: 30px;
+        }
+
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .story-content, .contact-container, .store-locator {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                order: 2;
+            }
+
+            .stores-list {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 0 0 30px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .age-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Gate Modal -->
+    <div class="age-gate" id="ageGate">
+        <div class="age-gate-content">
+            <h2>Age Verification Required</h2>
+            <p>You must be 21 years of age or older to access this website. By entering, you confirm that you are of legal age and agree to our Terms of Service and Privacy Policy.</p>
+            <div class="age-buttons">
+                <button class="btn" id="confirmAge">I am 21 or older</button>
+                <button class="btn btn-outline" id="exitSite">Exit Site</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Exoticus</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facility">Our Facility</a></li>
+                <li><a href="#strains">Our Strains</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#brand">Our Brand</a></li>
+                <li><a href="#merchandise">Merchandise</a></li>
+                <li><a href="#where-to-buy">Where to Buy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The Art of Cultivation</h1>
+                <p>Exoticus represents the pinnacle of cannabis craftsmanship, where nature, science, and wellness converge to create exceptional products of uncompromising quality.</p>
+                <a href="#story" class="btn">Discover Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Section -->
+    <section id="facility">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Facility</h2>
+                <p>State-of-the-art cultivation in a pristine, controlled environment</p>
+            </div>
+            <div class="facility-grid">
+                <div class="facility-card">
+                    <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1587334894132-806fb489b611?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="facility-content">
+                        <h3>Advanced Climate Control</h3>
+                        <p>Our facility maintains optimal temperature, humidity, and air quality through cutting-edge environmental systems.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="facility-content">
+                        <h3>Sustainable Practices</h3>
+                        <p>We employ water conservation, energy efficiency, and waste reduction methods to minimize our environmental impact.</p>
+                    </div>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1589923186209-5be1ebf8b7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="facility-content">
+                        <h3>Laboratory Testing</h3>
+                        <p>Every batch undergoes rigorous third-party testing to ensure purity, potency, and safety standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strains Section -->
+    <section class="strains" id="strains">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Strains</h2>
+                <p>Carefully curated varieties for specific wellness experiences</p>
+            </div>
+            <div class="strain-filters">
+                <button class="filter-btn active" data-filter="all">All Strains</button>
+                <button class="filter-btn" data-filter="calming">Calming</button>
+                <button class="filter-btn" data-filter="energizing">Energizing</button>
+                <button class="filter-btn" data-filter="balanced">Balanced</button>
+            </div>
+            <div class="strains-grid">
+                <div class="strain-card" data-category="calming">
+                    <div class="strain-img" style="background-image: url('https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="strain-content">
+                        <span class="strain-type">Calming</span>
+                        <h3>Serene Valley</h3>
+                        <p>Promotes deep relaxation and tranquility with subtle earthy notes and a smooth finish.</p>
+                    </div>
+                </div>
+                <div class="strain-card" data-category="energizing">
+                    <div class="strain-img" style="background-image: url('https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="strain-content">
+                        <span class="strain-type">Energizing</span>
+                        <h3>Sunrise Haze</h3>
+                        <p>Uplifting and creative effects with citrus aromas and a bright, clear-headed experience.</p>
+                    </div>
+                </div>
+                <div class="strain-card" data-category="balanced">
+                    <div class="strain-img" style="background-image: url('https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="strain-content">
+                        <span class="strain-type">Balanced</span>
+                        <h3>Harmony Blend</h3>
+                        <p>Perfect equilibrium of mind and body effects with floral notes and a clean finish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Our Story</h2>
+                    <p>Exoticus was founded in 2018 by a team of horticultural specialists and wellness advocates who shared a vision: to elevate cannabis cultivation to an art form while prioritizing consumer wellness and education.</p>
+                    <p>Our journey began with a single greenhouse and an unwavering commitment to quality. Today, we operate a state-of-the-art facility that combines traditional growing techniques with cutting-edge technology.</p>
+                    <p>We believe that exceptional cannabis starts with respect for the plant, the process, and the people we serve. Every product we create reflects our dedication to purity, consistency, and the therapeutic potential of this remarkable plant.</p>
+                    <a href="#brand" class="btn">Our Philosophy</a>
+                </div>
+                <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1556760544-74068565f05c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="brand" id="brand">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Brand Philosophy</h2>
+                <p>Guiding principles that define everything we do</p>
+            </div>
+            <div class="brand-values">
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Sustainable Cultivation</h3>
+                    <p>We implement eco-friendly practices that respect our planet while producing the highest quality products.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h3>Scientific Precision</h3>
+                    <p>Our methods combine artisanal care with laboratory precision for consistent, reliable results.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Wellness Focused</h3>
+                    <p>We prioritize the therapeutic benefits and responsible use of cannabis in all our products.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Community Commitment</h3>
+                    <p>We support education, research, and responsible access within the communities we serve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merchandise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Merchandise</h2>
+                <p>Premium apparel and accessories</p>
+            </div>
+            <div class="merch-grid">
+                <div class="merch-card">
+                    <div class="merch-img" style="background-image: url('https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                    <div class="merch-content">
+                        <h3>Organic Cotton Tee</h3>
+                        <p class="merch-price">$32.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="merch-card">
+                    <div class="merch-img" style="background-image: url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80');"></div>
+                    <div class="merch-content">
+                        <h3>Premium Ceramic Mug</h3>
+                        <p class="merch-price">$18.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="merch-card">
+                    <div class="merch-img" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                    <div class="merch-content">
+                        <h3>Artisan Glass Jar</h3>
+                        <p class="merch-price">$24.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="merch-card">
+                    <div class="merch-img" style="background-image: url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                    <div class="merch-content">
+                        <h3>Canvas Tote Bag</h3>
+                        <p class="merch-price">$28.00</p>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where to Buy Section -->
+    <section class="where-to-buy" id="where-to-buy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Where to Buy</h2>
+                <p>Find Exoticus products at authorized retailers</p>
+            </div>
+            <div class="store-locator">
+                <div class="stores-list">
+                    <div class="store-item">
+                        <div class="store-name">Green Leaf Dispensary</div>
+                        <div class="store-address">123 Wellness Ave, Portland, OR 97205</div>
+                        <div class="store-phone">(503) 555-0123</div>
+                    </div>
+                    <div class="store-item">
+                        <div class="store-name">Nature's Remedy</div>
+                        <div class="store-address">456 Botanical Blvd, Eugene, OR 97401</div>
+                        <div class="store-phone">(541) 555-0124</div>
+                    </div>
+                    <div class="store-item">
+                        <div class="store-name">The Apothecary</div>
+                        <div class="store-address">789 Herbal St, Bend, OR 97701</div>
+                        <div class="store-phone">(458) 555-0125</div>
+                    </div>
+                    <div class="store-item">
+                        <div class="store-name">Wellness Collective</div>
+                        <div class="store-address">321 Harmony Ln, Ashland, OR 97520</div>
+                        <div class="store-phone">(541) 555-0126</div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <!-- In a real implementation, this would be a Google Maps embed -->
+                    <div style="width:100%;height:100%;background-color:#e9ecef;display:flex;align-items:center;justify-content:center;">
+                        <p>Interactive Map Would Appear Here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <p>123 Cultivation Way</p>
+                                <p>Portland, OR 97205</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <p>(503) 555-EXOTICUS</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <p>info@exoticus.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Exoticus</div>
+                    <p>Exoticus represents the pinnacle of cannabis craftsmanship, where nature, science, and wellness converge.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#facility">Our Facility</a></li>
+                        <li><a href="#strains">Our Strains</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">OMMA Compliance</a></li>
+                        <li><a href="#">Lab Results</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Recall Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Exoticus. All rights reserved. For use only by adults 21 years of age and older.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Age Gate Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageGate = document.getElementById('ageGate');
+            const confirmAgeBtn = document.getElementById('confirmAge');
+            const exitSiteBtn = document.getElementById('exitSite');
+            
+            // Check if user has already confirmed age
+            if (!localStorage.getItem('ageConfirmed')) {
+                ageGate.style.display = 'flex';
+            } else {
+                ageGate.style.display = 'none';
+            }
+            
+            confirmAgeBtn.addEventListener('click', function() {
+                localStorage.setItem('ageConfirmed', 'true');
+                ageGate.style.display = 'none';
+            });
+            
+            exitSiteBtn.addEventListener('click', function() {
+                window.location.href = 'https://www.google.com';
+            });
+            
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
+            });
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+            
+            // Strain filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const strainCards = document.querySelectorAll('.strain-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    strainCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // In a real implementation, you would send this data to a server
+                console.log('Form submitted:', { name, email, subject, message });
+                
+                // Show success message
+                alert('Thank you for your message. We will get back to you soon!');
+                
+                // Reset form
+                contactForm.reset();
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
